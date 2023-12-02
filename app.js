@@ -11,6 +11,7 @@ import "dotenv/config";
 import mongoose from "mongoose";
 // mongoose.connect("mongodb://127.0.0.1:27017/kanbas")
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/kanbas';
+// const CONNECTION_STRING =  'mongodb+srv://zihanzhao1999:36c33s0326ZH@cluster0.wi4vzv2.mongodb.net/kanbas?retryWrites=true&w=majority';
 mongoose.connect(CONNECTION_STRING);
 const app = express()
 app.use(
@@ -27,6 +28,7 @@ app.use(
 //   app.use(
 //     session(sessionOptions)
 //   );
+
 const sessionOptions = {
     secret: "any string",
     resave: false,
